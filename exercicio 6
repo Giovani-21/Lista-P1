@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void) {
+
+
+float p_resistividade;
+float A_área;
+float L_comprimento;
+float R_resistencia;
+
+
+// entrada com os valores
+
+
+printf("p_resistividade[p]:\n");
+scanf("%f",&p_resistividade);
+
+printf("A_área[A]:\n");
+scanf("%f",&A_área);
+
+printf("L_comprimento[L]:\n");
+scanf("%f",&L_comprimento);
+
+// calcular 
+
+printf("inicio: Calculo\n");
+R_resistencia= p_resistividade * L_comprimento/A_área;
+
+//saida da resistencia total
+printf("o valor total da R_resistencia:%f", R_resistencia);
+;
+
+
+
+  
+  return 0;
+}
