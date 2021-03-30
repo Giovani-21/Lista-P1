@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+
+  //converter de polegada para milimetro
+
+  int e_polegada, s_milimetro;
+
+  //entrada do valor em polegada
+  printf("entre com valor em polegada[pol]:\n");
+
+  scanf("%d", & e_polegada);
+
+  //conversor de polegada para milimetro
+
+  printf("polegada;\n");
+  s_milimetro = e_polegada * 25.4;
+  //saida do valor em milimetro
+  printf("saida milimetro: %d[mm]\n",s_milimetro);
+
+  printf("ok");
+  return 0;
+}
