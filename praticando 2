@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+
+int idade; 
+
+printf("favor informar idade:\n");
+scanf("%i", &idade);
+
+if(idade < 18 ){
+  printf("bebidas alcoolicas não estão liberadas.\n");
+} else {
+  printf("bebidas alcoolicas liberadas.\n");
+}
+
+  
+
+  return 0;
+}
