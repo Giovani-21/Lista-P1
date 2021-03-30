@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void) {
+
+//declaração de variaveis
+int e_resistor_1;
+int e_resistor_2;
+int e_resistor_3;
+int e_resistor_4;
+int resistencia_total;
+
+//entrada com valor das resistencias
+printf("Resistor 1[r]:\n");
+scanf("%d",&e_resistor_1);
+
+printf("Resistor 2[r]:\n");
+scanf("%d",&e_resistor_2);
+
+
+printf("Resistor 3[r]:\n");
+scanf("%d",&e_resistor_3);
+
+
+printf("Resistor 4[r]:\n");
+scanf("%d",&e_resistor_4);
+
+//conversão das resistencias
+
+printf("inicio: Calculo\n");
+resistencia_total = e_resistor_1 + e_resistor_2 + e_resistor_3 + e_resistor_4;
+
+
+//saida da resistencia total
+printf("o valor total da resistencia:%d", resistencia_total);
+
+
+
+  printf("Hello World\n");
+  return 0;
+}
