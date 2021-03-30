@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main(void) {
+
+int e_CPF_pos9,e_CPF_pos8,e_CPF_pos7,e_CPF_pos6,e_CPF_pos5;int e_CPF_pos4,e_CPF_pos3,e_CPF_pos2,e_CPF_pos1;
+int e_CPF_div2,e_CPF_div1;
+int div2_calc, div1_calc;
+
+printf("CPF [1 2 3 4 5 6 7 8 9] -div: [1 2]\n");
+printf("Digite o 1o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos9);printf("Digite o 2o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos8);
+printf("Digite o 3o. digito do CPF:\n");scanf("%d",&e_CPF_pos7);
+printf("Digite o 4o. digito do CPF:\n");scanf("%d",&e_CPF_pos6);
+printf("Digite o 5o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos5);
+printf("Digite o 6o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos4);
+printf("Digite o 7o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos3);
+printf("Digite o 8o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos2);printf("Digite o 9o. digito do CPF:\n");
+scanf("%d",&e_CPF_pos1);
+printf("Digite o 1o. digito do verificador do CPF:\n");
+scanf("%d",&e_CPF_div2);
+printf("Digite o 2o. digito do verificador do CPF:\n");
+scanf("%d",&e_CPF_div1);
+
+
+div2_calc= e_CPF_pos9*10 + e_CPF_pos8*9 + e_CPF_pos7*8;div2_calc= div2_calc+ e_CPF_pos6*7 + e_CPF_pos5*6;div2_calc= div2_calc+ e_CPF_pos4*5 + e_CPF_pos3*4;div2_calc= div2_calc+ e_CPF_pos2*3 + e_CPF_pos1*2;
+
+if ( (div2_calc %11) >2) {
+  div2_calc = 11 -(div2_calc %11);
+  }else{
+    div2_calc = 0;
+  }
+
+
+
+div1_calc = e_CPF_pos9*11 + e_CPF_pos8*10 + e_CPF_pos7*9;div1_calc = div1_calc + e_CPF_pos6*8 + e_CPF_pos5*7;div1_calc = div1_calc + e_CPF_pos4*6 + e_CPF_pos3*5;
+div1_calc = div1_calc + e_CPF_pos2*4 + e_CPF_pos1*3;div1_calc = div1_calc + div2_calc *2;  
+
+if ( (div1_calc %11) >2) 
+{
+  div1_calc = 11 -(div1_calc %11);
+  } else
+  {
+    div1_calc = 0;
+  }
+
+if ((div2_calc == e_CPF_div2) && ( div1_calc == e_CPF_div1)){printf("CPF valido");
+}else{
+  printf("CPF invalido");
+  }
+
+
+  printf("Hello World\n");
+  return 0;
+}
