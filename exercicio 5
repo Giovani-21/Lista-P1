@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main(void) {
+
+
+ float sexo;
+  float s_feminino;
+  float s_masculino;
+  float altura;
+  float calc_peso_ideal_masculino;
+  float calc_peso_ideal_feminino;
+  float mostrar_peso_ideal;
+
+   // Entre com o sexo.
+
+   printf("Informe o Sexo [0] para Feminino e [1] para Sexo Masculino:\n");
+   scanf("%f",&sexo);
+ 
+   // Se for 0 = Feminino.
+
+   if (sexo == 0){
+ 
+   printf ("Sexo Feminino \n\n");
+
+   printf("Entre com Altura:");
+   scanf("%f",&altura);
+   calc_peso_ideal_feminino = (62.1*altura) - 44.7;
+   
+    printf("Peso Ideal=%.2fkg",calc_peso_ideal_feminino);
+   } 
+   
+
+     else if (sexo == 1){
+    
+     
+   printf ("Sexo Masculino \n\n");
+
+   printf("Entre com Altura:");
+   scanf("%f",&altura);
+   calc_peso_ideal_masculino = (72.7*altura) - 58;
+   
+    printf("Peso Ideal=%.2fkg",calc_peso_ideal_masculino);
+     }
+     if(sexo >1){
+       printf("Erro Sexo não Identificado\n");
+     }
+
+
+  
+  return 0;
+}
